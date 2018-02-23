@@ -42,7 +42,9 @@ public class HomeController {
 		model.addAttribute("js", contextFactory.path("js"));
 		model.addAttribute("css", contextFactory.path("css"));
 		model.addAttribute("img", contextFactory.path("img"));
-		return "main/home";
+		return "public:main/home.tiles";
 	}
+	
+	
 	
 }
