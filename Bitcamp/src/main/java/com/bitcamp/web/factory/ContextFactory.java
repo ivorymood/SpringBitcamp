@@ -2,15 +2,20 @@ package com.bitcamp.web.factory;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
-import com.bitcamp.web.controller.HomeController;
+import com.bitcamp.web.domain.PathDTO;
+import com.bitcamp.web.enums.Path;
 @Component
 //추상은 객체가 될수 없으므로 contextFactory에 component붙임
 public class ContextFactory extends Factory{
 	private static final Logger logger = LoggerFactory.getLogger(ContextFactory.class);
+	
+	@Autowired ContextFactory contextFactory;
+	@Autowired PathDTO path;
 	@Override
 	public Object create() {
 		/*ServletRequestAttributes o = (ServletRequestAttributes) RequestContextHolder.currentRequestAttributes();
@@ -21,12 +26,15 @@ public class ContextFactory extends Factory{
 				.getRequest()
 				.getContextPath()		//jsp에서 가져다 쓰게되면 느림. 그래서  getcontextPath
 				;
-
 	}
-	public String path(String tag) {
-		logger.info("ContextFactory path()에 tag값은  {}  이다", tag);
+	public PathDTO path() {
+		
 		logger.info("ContextFactory path()에 리턴되는 경로 값은  {}  이다", create());
-		return create()+"/resources/"+tag;
+		path.setCtx((String) create());
+		path.setCss(create()+Path.CSS.toString());
+		path.setImg(create()+Path.IMG.toString());
+		path.setJs(create()+Path.JS.toString());
+		return path;
 	}
 	
 	//왜 추상팩토리? new를 해버리면, 그냥 밀고 새것이 됨.

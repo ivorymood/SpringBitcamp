@@ -1,13 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<html>
-<head>
-	<title>mypage</title>
-	<script src="${js}/jquery-3.3.1.min.js "> </script>	
-</head>
-<body>
-<button id="nav_btn">네비 바 이동</button>
 <article>
-	<form id="profile_form" action="">
 	<table id="mypage_table">
 		<tr>
 			<td id = "profile" rowspan="6"><img src=""></td>
@@ -48,19 +40,14 @@
 		</tr>
 	</table>
 	<button id="pass_change_btn">비밀번호 변경</button>
-	<input type="hidden" name="cmd" value="move"/>
-	<input type="hidden" name="page" value="change_pass"/>
-	<input type="hidden" name="dir" value="bitcamp"/>
-	</form>
-	<button id="delete_btn">회원탈퇴</button>
+	<button id="btn-mypage-leave">회원탈퇴</button>
+	<button id="btn-mypage-change">정보수정</button>
 </article>
-</body>
 <script>
-$('#nav_btn').on('click', function(){
-	location.href = "${context}/nav";
+$(function(){
+	
+$('#btn-mypage-change').on('click', function(){
+	alert('마이페이지 확인');		
 });
-
-
-
+});
 </script>
-</html>

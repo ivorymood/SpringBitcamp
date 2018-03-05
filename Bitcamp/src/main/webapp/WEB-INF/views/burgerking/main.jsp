@@ -1,9 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<!doctype html>
-<html lang="en">
-<body>
-<%@ include file="../common/header.jsp" %>
-<%@ include file="../common/nav.jsp" %>
+
 	<section id="wrapper">
 		<article>
 			<header id="second_header">
@@ -13,7 +9,6 @@
 				</hgroup>
 			</header>
 		</article>	
-		<form id="order_form" action="result.jsp" style = "width : 450px; margin: 0 auto;">	
 	<!-- 넘겨줄 값 없을때는 division, 있을때는 form action으로 묶자 -->
 			<article>
 			<table>
@@ -106,8 +101,5 @@
 				</tr>
 			</table>
 			</article>
-		</form>
 	</section>
-<%@ include file="../common/footer.jsp" %>
-</body>
-</html>
+

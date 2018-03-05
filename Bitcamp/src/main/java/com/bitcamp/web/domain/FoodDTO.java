@@ -2,9 +2,12 @@ package com.bitcamp.web.domain;
 
 import java.io.Serializable;
 
+import org.springframework.stereotype.Component;
+
 import lombok.Data;
 
 @Data
+@Component
 public class FoodDTO implements Serializable{
 	private String menu, price, count, checkbox, id;
 

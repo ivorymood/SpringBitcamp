@@ -4,7 +4,7 @@
 	</button>
 <script>
 $('#btn').on('click', function(){
-	location.href = "${context}/login";
+	location.href = "${path.ctx}/login";
 });
 //$: document.get~By ID ~  on(): addEventListener
 </script>

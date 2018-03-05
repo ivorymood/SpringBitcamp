@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.bitcamp.web.domain.PathDTO;
 import com.bitcamp.web.factory.ContextFactory;
 
 
@@ -14,13 +15,11 @@ import com.bitcamp.web.factory.ContextFactory;
 public class AuthController {
 	private static final Logger logger = LoggerFactory.getLogger(AuthController.class);
 	@Autowired ContextFactory contextFactory;
-	
+
 	@RequestMapping("/login")	//디폴트가 get방식이므로 method 생략 가능, get방식일때는 value도 생략가능
 	public String login(Model model) {
 		logger.info("AuthController login() - {}", "ENTERED");
-		model.addAttribute("context", (String) new ContextFactory().create());
-		model.addAttribute("js", contextFactory.path("js"));
-		return "user/login";
+		return "public:user/login.tiles";
 	}
 	
 }
