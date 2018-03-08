@@ -9,7 +9,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-
+import com.bitcamp.web.command.Command;
 import com.bitcamp.web.domain.LottoDTO;
 import com.bitcamp.web.service.LottoService;
 @Service
@@ -56,6 +56,48 @@ public class LottoServiceImpl implements LottoService{
 			list.add(createLotto());
 		}
 		return list;
+	}
+
+	@Override
+	public void addLotto(Command cmd) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void modifyLotto(Command cmd) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void removeLotto(Command cmd) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<LottoDTO> list() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<LottoDTO> findByName(Command cmd) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public LottoDTO findById(Command cmd) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int count() {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 }

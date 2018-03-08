@@ -9,11 +9,11 @@ import lombok.Data;
 @Data
 @Component
 public class FoodDTO implements Serializable{
-	private String menu, price, count, checkbox, id;
+	private String foodSeq, menu, price;
 
 	@Override
 	public String toString() {
-		return "메뉴 [상품명: " + menu + ", 가격: " + price + " 원, 수량: " + count + "]";
+		return "메뉴 [상품명: " + menu + ", 가격: " + price + " 원]";
 	}
 	
 }

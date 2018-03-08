@@ -7,5 +7,5 @@ import lombok.Data;
 @Data
 @Component
 public class MobileDTO {
-	private String id, phoneNum, regDate, customerNum;
+	private String mobSeq, thumbnail, model;
 }

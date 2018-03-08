@@ -9,12 +9,14 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
-import com.bitcamp.web.domain.PathDTO;
+import com.bitcamp.web.command.Path;
 import com.bitcamp.web.factory.ContextFactory;
+import com.bitcamp.web.factory.ShiftFactory;
 
 
 
@@ -27,7 +29,8 @@ public class HomeController {
 	
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 	@Autowired ContextFactory factory;	//이렇게 하면 싱글톤 개념. static이 됨.
-	@Autowired PathDTO path;
+	@Autowired Path path;
+	@Autowired ShiftFactory shift;
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(Locale locale, Model model) {
 		logger.info("Welcome home! The client locale is {}.", locale);
@@ -36,12 +39,15 @@ public class HomeController {
 		model.addAttribute("path", factory.path());
 		return "index";
 	}
-	@RequestMapping(value ="/home", method = RequestMethod.GET)
-	public String home(Model model) {
-		logger.info(" Move to {} ", "main/home");		// sysout.print 대체한것. 중괄호 속에 ,뒤에 있는 것이 들어가는 구조.
-		return "public:main/home.tiles";
-	}
 	
+	@RequestMapping(value = "/move/{dir}/{page}", method = RequestMethod.GET)
+	   public String move(
+	           @PathVariable("dir") String dir,
+	           @PathVariable("page") String page
+	           ) {
+	       logger.info(" Move To {} ",dir+"/"+page);
+	       return shift.create(dir, page);
+	   }
 	
 	
 }

@@ -37,6 +37,8 @@
 
 <script>
 $('#index_login_btn').on('click', function(){
-	location.href ="${path.ctx}/mypage";
+	var userid = $('#index_input_id').val();
+	var password = $('#index_input_pw').val();
+	location.href ="${path.ctx}/login/"+userid+"/"+password;
 });
 </script>

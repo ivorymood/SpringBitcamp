@@ -19,13 +19,26 @@
           <setting name="lazyLoadTriggerMethods" value="equals,clone,hashCode,toString"/>
     </settings>
     <typeAliases>
+        <typeAlias type="com.bitcamp.web.domain.AdminDTO" alias="admin"/>
+        <typeAlias type="com.bitcamp.web.domain.BoardDTO" alias="board"/>
+        <typeAlias type="com.bitcamp.web.domain.FoodDTO" alias="food"/>
+        <typeAlias type="com.bitcamp.web.domain.KakaoDTO" alias="kakao"/>
+        <typeAlias type="com.bitcamp.web.domain.LottoDTO" alias="lotto"/>
         <typeAlias type="com.bitcamp.web.domain.MemberDTO" alias="member"/>
+        <typeAlias type="com.bitcamp.web.domain.TxDTO" alias="tx"/>
+        <typeAlias type="com.bitcamp.web.domain.MobileDTO" alias="mobile"/>
         <typeAlias type="com.bitcamp.web.command.Command" alias="cmd"/>
         <typeAlias type="com.bitcamp.web.command.ResultMap" alias="rmp"/>
     </typeAliases>
- <mappers>
-   <mapper resource="com/bitcamp/web/mapper/MemberMapper.xml"/>  
-   
- </mappers>
+	<mappers>
+	 	<mapper resource="com/bitcamp/web/mapper/AdminMapper.xml"/>
+		<mapper resource="com/bitcamp/web/mapper/BoardMapper.xml"/>
+		<mapper resource="com/bitcamp/web/mapper/FoodMapper.xml"/>
+		<mapper resource="com/bitcamp/web/mapper/KakaoMapper.xml"/>
+		<mapper resource="com/bitcamp/web/mapper/LottoMapper.xml"/> 
+		<mapper resource="com/bitcamp/web/mapper/MemberMapper.xml"/>  
+	 	<mapper resource="com/bitcamp/web/mapper/MobileMapper.xml"/>
+	 	<mapper resource="com/bitcamp/web/mapper/TxMapper.xml"/>
+	</mappers>
  
 </configuration>

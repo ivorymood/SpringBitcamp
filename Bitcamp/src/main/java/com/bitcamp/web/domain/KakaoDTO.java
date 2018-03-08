@@ -7,7 +7,7 @@ import lombok.Data;
 @Data
 @Component
 public class KakaoDTO {
-	private String customerNum, accountNum, money, id;
+	private String accSeq, accountNum, money, id;
 	
 	
 }
