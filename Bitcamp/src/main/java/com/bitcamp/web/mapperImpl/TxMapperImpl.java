@@ -41,7 +41,8 @@ String ns = "com.bitcamp.web.mapperImpl.TxMapperImpl.";
 	@Override
 	public TxDTO selectById(Command cmd) {
 		// TODO Auto-generated method stub
-		return null;
+		System.out.println("TxMapperImpl의 selectById()"+cmd.getMember().getId());
+		return sqlSession.selectOne(ns+"selectById", cmd);
 	}
 	@Override
 	public int count() {

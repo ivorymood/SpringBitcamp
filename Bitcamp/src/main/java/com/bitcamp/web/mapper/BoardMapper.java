@@ -13,9 +13,10 @@ public interface BoardMapper {
 	public void updateBoard(Command cmd);
 	public void deleteBoard(Command cmd);
 
-	public List<BoardDTO> selectAll();
+	public List<BoardDTO> selectList(Command cmd);
 	public List<BoardDTO> selectByName(Command cmd);    
 	public BoardDTO selectById(Command cmd);            
 	public int count();
+	public BoardDTO selectBySeq(Command cmd);
 
 }

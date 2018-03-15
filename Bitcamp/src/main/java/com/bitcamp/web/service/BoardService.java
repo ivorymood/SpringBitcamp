@@ -13,9 +13,9 @@ public interface BoardService {
 	public void modifyBoard(Command cmd);
 	public void removeBoard(Command cmd);
 
-	public List<BoardDTO> list();
+	public List<BoardDTO> list(Command cmd);
 	public List<BoardDTO> findByName(Command cmd);    
 	public BoardDTO findById(Command cmd);           
 	public int count();
-
+	public BoardDTO findBySeq(Command cmd);
 }

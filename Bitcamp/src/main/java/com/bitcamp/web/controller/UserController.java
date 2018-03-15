@@ -7,7 +7,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.SessionAttributes;
@@ -17,8 +16,11 @@ import com.bitcamp.web.command.Command;
 import com.bitcamp.web.domain.LottoDTO;
 import com.bitcamp.web.domain.MemberDTO;
 import com.bitcamp.web.factory.ContextFactory;
+import com.bitcamp.web.factory.ShiftFactory;
 import com.bitcamp.web.service.LottoService;
 import com.bitcamp.web.service.MemberService;
+import com.bitcamp.web.service.MobileService;
+import com.bitcamp.web.service.TxService;
 @SessionAttributes("user")
 @Controller
 public class UserController {
@@ -26,9 +28,12 @@ public class UserController {
 	@Autowired ContextFactory contextFactory;
 	@Autowired LottoService lottoService;
 	@Autowired MemberService mService;
+	@Autowired MobileService mobileService;
+	@Autowired TxService txService;
 	@Autowired LottoDTO lotto;
 	@Autowired Command cmd;
 	@Autowired MemberDTO member;
+	@Autowired ShiftFactory shift;
 	@RequestMapping("/login/{userid}/{password}")
 	public String login(Model model, @PathVariable("userid")String userid,
 			@PathVariable("password")String password) {
@@ -41,8 +46,16 @@ public class UserController {
 		if(mService.exist(cmd)) {
 			model.addAttribute("user", mService.findMemberById(cmd));
 			path = "public:user/mypage.tiles";
+			model.addAttribute("tx", txService.selectById(cmd));
 		}
 		return path;
+	}
+	@RequestMapping("/check")
+	public String check(Model model) {
+		logger.info("UserController check() {}", "ENTERED");
+		
+		//mService.findMemberById(cmd).getId();
+		return shift.create("user", "mypage");
 	}
 	@RequestMapping("/logout")
 	public String logout(SessionStatus status) {
@@ -92,4 +105,5 @@ public class UserController {
 		
 		return "redirect:/login";
 	}
+	
 }

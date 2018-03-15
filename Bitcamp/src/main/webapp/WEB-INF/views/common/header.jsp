@@ -25,20 +25,13 @@
 	            	<span class="glyphicon glyphicon-grain" aria-hidden="true">&nbsp;HOME</span>
 	            </a></li>
 	            <!-- HOME END -->
-	            <li><a href="#about">
-	            	<span class="glyphicon glyphicon-road" aria-hidden="true">&nbsp;MAIL</span>
+	            <li><a id="span-board" href="#">
+	            	<span class="glyphicon glyphicon-road" aria-hidden="true">&nbsp;자유게시판</span>
 	            </a></li>
 	            <!-- MAIL END -->
-	           
-	           	<li>
-	           		<a href="" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
-	           		aria-expanaded="false">회원
-	           		<span class="caret"></span>
-	           		</a>
-	           		<ul id="ul-user" role="menu">
 	            <c:choose>
 	                <c:when test="${user eq null}">
-	                    <li class="dropdown">
+	                    <li >
 	                        <a id="a-login" href="#"> 
 	                            <span class="glyphicon glyphicon-user" aria-hidden="true">&nbsp;LOGIN</span>
 	                        </a>
@@ -59,12 +52,10 @@
 	                        <a id="a-logout" href="#">
 	                            <span class="glyphicon glyphicon-remove-circle" aria-hidden="true">&nbsp;LOGOUT</span>
 	                        </a>
-	                    </li>                
+	                    </li>
 	                </c:otherwise>
+	           		
           	     </c:choose>
-	           		</ul>
-	           	</li>
-	            
 	            <!-- LOGIN END -->
 		   		<li class=:dropdown>
 		   			<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
@@ -95,21 +86,32 @@ $('#a-logout').on('click', function(){
 $('#a-join').on('click', function(){
 	location.href = "${path.ctx}/move/user/join";
 });
-var $ulUtil = $("#ul-util");
-$ulUtil.addClass("dropdown-menu");
+/* $('#span-board').click(()=>{
+	location.herf="";
+}); */
+$('#span-board').on('click', function(){
+	alert("게시판 버튼 클릭");
+	app.boardList(1);
+	//move("user/login");
+});
+function move(x){
+	//location.href = "${path.ctx}/move/"+x;
+}
+$("#ul-util").addClass("dropdown-menu");
 $('.dropdown-menu a').eq(0).on('click', function(){
-	location.href="${path.ctx}/move/burgerking/main";
+	app.move("burgerking/main");
 });
 $('.dropdown-menu a').eq(1).on('click', function(){
-	location.href = "${path.ctx}/move/kakao/main";
+	app.move("kakao/main");
 });
 $('.dropdown-menu a').eq(2).on('click', function(){
-	location.href = "${path.ctx}/move/bitcamp/main";
+	app.move("bitcamp/main");
 });
 $('.dropdown-menu a').eq(3).on('click', function(){
-	location.href="${path.ctx}/move/mobile/main";
+	app.move("mobile/main");
 });
 $('.dropdown-menu a').eq(4).on('click', function(){
-	location.href="${path.ctx}/move/lotto/main";
+	app.move("lotto/main");
 });
+
 </script>

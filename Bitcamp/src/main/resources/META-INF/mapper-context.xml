@@ -29,6 +29,7 @@
         <typeAlias type="com.bitcamp.web.domain.MobileDTO" alias="mobile"/>
         <typeAlias type="com.bitcamp.web.command.Command" alias="cmd"/>
         <typeAlias type="com.bitcamp.web.command.ResultMap" alias="rmp"/>
+        
     </typeAliases>
 	<mappers>
 	 	<mapper resource="com/bitcamp/web/mapper/AdminMapper.xml"/>

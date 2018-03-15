@@ -6,4 +6,5 @@
  	<select id="selectAll" resultType="mobile">
  		SELECT mob_seq AS mobSeq, thumbnail, model FROM Mobile
  	</select>
+ 	
 </mapper>

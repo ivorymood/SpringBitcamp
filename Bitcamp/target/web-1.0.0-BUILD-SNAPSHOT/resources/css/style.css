@@ -1,0 +1,114 @@
+@charset "UTF-8";
+
+
+#content{
+	margin-top: 100px;
+	
+}
+
+
+
+/* login-style */
+
+
+
+/* index-style */
+#index_header{width: 100%; height: 50px; text-align: center}
+#index_table{width : 80%; margin-top: 200px; margin: 0 auto}
+#index_login_box{width: 300px; margin: 0 auto; text-align: center}
+#index_input_id{width: 200px; height: 45px}
+#index_input_pw{width:200px; height:45px}
+#index_login_btn{width:100px; height:100px}
+
+/* join-style */
+
+#join_second_header{height: 80px; text-align: center;}
+#join_prg{height: 600px;  text-align: center;}
+#join_table, tr, td{text-align: left; padding: 5px; border-bottom: 1px solid #000080; }
+tr:hover{background-color: lightgray }
+td:nth-child(odd){font: bold 15px verdana, sans-serif;}
+td:nth-child(even){font: 7px verdana, sans-serif; }
+#join_form{width: 700px; margin: 0 auto;}
+#join_file{
+    background-image: url('../img/paw.png');
+    /* background-position: 100px 100px;  */
+    background-repeat: no-repeat;
+    width: 110px; height: 110px;
+}
+
+/* member_register_form-style */
+#admin_header{margin: 15px;}
+#admin_aside{float: left; width: 15%; height: 700px;
+				font: bold 18px verdana, sans-serif; background-color: AntiqueWhite;}
+#admin_body{width: 90%; height: 80%; text-align: center;}
+
+#member_table{padding: 5px; margin: 0 auto; text-align: center;}
+#member_table tr th{background-color: #008CBA; color: white;}
+td:nth-child(1){width: 100px; height: 50px; text-align: left;}
+td:nth-child(2){width: 300px; height: 50px;}
+tr:hover{font: bold 16px verdana, sans-serif; color: #008CBA;}
+#member_table, tr, td{border-bottom: 2px solid darkgray;}
+
+#member_register_btn{width: 50px; height: 30px; }
+
+/* member_list-style */
+#admin_header{margin: 15px;}
+#admin_aside{float: left; width: 15%; height: 700px;
+				font: bold 18px verdana, sans-serif; background-color: AntiqueWhite;}
+#admin_body{width: 90%; height: 80%; text-align: center;}
+
+#member_table{padding: 5px; margin: 0 auto; text-align: center;}
+#member_table tr th{background-color: #008CBA; color: white;}
+#member_table tr td{width: 150px; height: 50px;}				
+#member_table, tr, td{border: 2px solid darkgray;}
+
+#search_member_btn{width: 50px; height: 30px;}
+#member_register_form_btn{width: 50px; height: 30px; float: right;}
+
+
+/* common-style */
+*{margin: 0px; padding: 0px;}
+h1{font: bold 20px verdana, sans-serif;}
+h2{font: bold 14px verdana, sans-serif;}
+header, section, footer, aside, nav, article, figure, figcaption, hgroup{display: block;}
+table, tr, td, th{border-collapse: collapse;}
+body{text-align: center;}
+a{text-decoration: none; color: #0000a0;}
+#wrapper{width: 100%; margin: 15px auto; text-align: center; min-height: calc(100vh - 20px);}
+#header{height: 50px; width: 100%; text-align: center}
+#nav{background: #000080; padding: 5px 10px; width: 100%; margin-bottom: 20px;}
+#nav ul{height: 10%}
+#nav li{display: inline-block; list-style: none; padding: 2px;
+			width:15%; text-align: center;}
+#nav li a{color: white; font: bold 14px verdana, sans-serif;}
+#footer{height: 2px; margin-top: -20px;}
+
+/* admin-style */
+#admin_header{margin: 15px;}
+#admin_aside{float: left; width: 15%; height: 700px;
+				font: bold 18px verdana, sans-serif; background-color: AntiqueWhite;}
+#admin_body{width: 90%; height: 80%; text-align: center;}
+#admin_table{padding: 5px; margin: 0 auto; text-align: center;}
+#admin_table tr th{background-color: #008CBA; color: white;}
+#admin_table tr td{width: 200px; height: 150px;}				
+#admin_table, tr, td{border: 2px solid darkgray;}
+
+#add_member_btn{width: 50px; height: 30px; float: right;}
+#search_member_btn{width: 50px; height: 30px;}
+#create_table_btn{width: 100px; height: 50px; background-color: #008CBA; display: inline-block;
+				border: 2px solid #008CBA; color: white; font: bold 15px verdana, sans-serif; 
+				transition-duration: 0.4s; cursor: pointer;}
+#create_table_btn:hover{background-color: white; color: black;}
+
+
+/* bitcamp-style */
+#bit_table{margin: 20px auto; }
+#bit_table, tr, td{border: 2px solid darkgray;}
+#bit_table tr td{width: 80px; height: 50px;}
+#attend_result{width: 50px; height: 30px}
+#mypage_table{margin: 20px auto;}
+#mypage_table, tr, td{border: 2px solid darkgray;}
+#mypage_table tr td{height:50px}
+#mypage_table tr profile{width:150px; height:200px}
+.column{width: 80px; background-color: lightgray;}
+.content{width: 200px;}

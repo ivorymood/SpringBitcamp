@@ -61,7 +61,8 @@ public class TxServiceImpl implements TxService{
 	@Override
 	public TxDTO selectById(Command cmd) {
 		// TODO Auto-generated method stub
-		return null;
+		System.out.println("TxServiceImpl의 selectById()"+cmd.getMember().getId());
+		return txMapper.selectById(cmd);
 	}
 
 	@Override

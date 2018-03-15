@@ -37,7 +37,7 @@ public class HomeController {
 				
 		model.addAttribute("serverTime", new SimpleDateFormat("yyyy년 MM월 dd일 hh:mm").format(new Date()) );
 		model.addAttribute("path", factory.path());
-		return "index";
+		return (String) shift.create();
 	}
 	
 	@RequestMapping(value = "/move/{dir}/{page}", method = RequestMethod.GET)

@@ -6,9 +6,9 @@ import org.springframework.stereotype.Component;
 public class ShiftFactory extends Factory{
 
     @Override
-    public Object create() {
+    public String create() {
         // TODO Auto-generated method stub
-        return null;
+        return String.format("index:index.tiles");
     }
     public String create(String p1,String p2) {
         return String.format("public:%s/%s.tiles", p1,p2);

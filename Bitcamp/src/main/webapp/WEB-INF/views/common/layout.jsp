@@ -10,8 +10,11 @@
 	<link rel="stylesheet" href="${path.css}/bootstrap.css " />
 	<link rel="stylesheet" href="${path.css}/bootstrap-theme.css" />
 	<link rel="stylesheet" href="${path.css}/style.css" />
+	<link rel="stylesheet" href="${path.css}/magnific-popup.css" />
 	<script src="${path.js}/jquery-3.3.1.min.js ">   <!-- <--'기능'을 import 한것!--> </script>		
 	<script src="${path.js}/bootstrap.js"></script>
+	<script src="${path.js}/app.js"></script>
+	<script src="${path.js}/jquery.magnific-popup.min.js"></script>
 </head>
 <body>
 	<header>
@@ -24,7 +27,7 @@
 			<tiles:insertAttribute name="content"/>
 		</article>
 	</section>
-	레이아웃
+	
 	<footer>
 		<div>
 			<tiles:insertAttribute name="footer"/>

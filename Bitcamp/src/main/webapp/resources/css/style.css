@@ -1,5 +1,26 @@
 @charset "UTF-8";
 
+
+#content{
+	margin-top: 100px;
+	
+}
+
+
+
+
+/* magnific popup */
+.white-popup {
+  position: relative;
+  background: #FFF;
+  padding: 20px;
+  width: auto;
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+
+
 /* login-style */
 
 

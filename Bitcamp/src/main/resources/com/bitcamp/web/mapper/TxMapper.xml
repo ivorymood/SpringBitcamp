@@ -38,4 +38,11 @@
 			</otherwise>
 		</choose>)
 	</insert>
+	<select id="selectById" resultType="tx" parameterType="cmd">
+		SELECT id, count, total, regdate, telecom, phone_num As phoneNum
+		FROM Tx 
+		WHERE id like #{member.id}
+		
+		
+	</select>
 </mapper>

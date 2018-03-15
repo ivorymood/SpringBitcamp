@@ -2,6 +2,7 @@ package com.bitcamp.web.command;
 
 import org.springframework.stereotype.Component;
 
+import com.bitcamp.web.adapter.Page;
 import com.bitcamp.web.domain.AdminDTO;
 import com.bitcamp.web.domain.BoardDTO;
 import com.bitcamp.web.domain.FoodDTO;
@@ -28,4 +29,5 @@ public class Command{
 	protected MemberDTO member;
 	protected MobileDTO mobile;
 	protected TxDTO tx;
+	protected Page paging;
 }
